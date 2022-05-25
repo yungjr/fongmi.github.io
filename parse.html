@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>聚合嗅探解析</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta name="viewport" content="width=device-width"/>
+</head>
+<body>
+<script>
+var apiArray = [
+    'https://nbjx.vip/?url=',
+    'https://www.ckmov.vip/api.php?url=',
+    'https://jx.zui.cm/?url=',
+    'https://jx.m3u8.tv/jiexi/?url=',
+    'https://vip.kkflv.net/api/?url=',
+    'https://9kjx.com/?url=',
+    'https://api.jhdyw.vip/jhcs/bfq/?url=',
+    'https://jx.973973.xyz/?url=',
+    'https://vip.cygc.xyz/?url=',
+    'https://jx.gbxy.net.cn/?url=',
+    'https://www.h8jx.com/jiexi.php?url=',
+    'https://jmwl.qd234.cn/v/?v=',
+    'https://jx.blbo.cc:4433/?url=',
+    'https://jx.iiiv.vip/?url=',
+    'https://m2090.com/?url=',
+    'https://panguapi.ntryjd.net/pangu2021/?url=',
+    'https://www.1717yun.com/jx/ty.php?url=',
+    'https://jx.xmflv.com/?url=',
+    'https://vip.parwix.com:4433/player/analysis.php?v=',
+    'https://okjx.cc/?url='
+];
+const origin = document.location.href.split('url=')[1];
+let iframeHtml = '';
+for (let i = 0; i < apiArray.length; i++) {
+    const URL = apiArray[i] + origin;
+    iframeHtml = iframeHtml + "<iframe sandbox='allow-scripts allow-same-origin allow-forms' frameborder='0' allowfullscreen='true' referrerPolicy='no-referrer' src=" + URL + "></iframe>";
+}
+document.write(iframeHtml);
+</script>
+</body>
+</html>
